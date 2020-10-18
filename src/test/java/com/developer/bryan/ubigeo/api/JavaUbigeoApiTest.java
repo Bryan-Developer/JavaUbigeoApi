@@ -3,12 +3,14 @@
  */
 package com.developer.bryan.ubigeo.api;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
+@SpringBootTest
 public class JavaUbigeoApiTest {
-    @Test public void testAppHasAGreeting() {
-        JavaUbigeoApi classUnderTest = new JavaUbigeoApi();
-        assertNotNull("app should have a greeting", classUnderTest.getGreeting());
+
+    @Test
+    void contextLoads() {
+
     }
 }
