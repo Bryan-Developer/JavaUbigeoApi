@@ -1,0 +1,26 @@
+--- TABLE: Departamentos
+INSERT INTO departamentos(departamento,codigo) VALUES('Amazonas','01');
+INSERT INTO departamentos(departamento,codigo) VALUES('Ancash','02');
+INSERT INTO departamentos(departamento,codigo) VALUES('Apurimac','03');
+INSERT INTO departamentos(departamento,codigo) VALUES('Arequipa','04');
+INSERT INTO departamentos(departamento,codigo) VALUES('Ayacucho','05');
+INSERT INTO departamentos(departamento,codigo) VALUES('Cajamarca','06');
+INSERT INTO departamentos(departamento,codigo) VALUES('Callao','07');
+INSERT INTO departamentos(departamento,codigo) VALUES('Cusco','08');
+INSERT INTO departamentos(departamento,codigo) VALUES('Huancavelica','09');
+INSERT INTO departamentos(departamento,codigo) VALUES('Huanuco','10');
+INSERT INTO departamentos(departamento,codigo) VALUES('Ica','11');
+INSERT INTO departamentos(departamento,codigo) VALUES('Junin','12');
+INSERT INTO departamentos(departamento,codigo) VALUES('La Libertad','13');
+INSERT INTO departamentos(departamento,codigo) VALUES('Lambayeque','14');
+INSERT INTO departamentos(departamento,codigo) VALUES('Lima','15');
+INSERT INTO departamentos(departamento,codigo) VALUES('Loreto','16');
+INSERT INTO departamentos(departamento,codigo) VALUES('Madre de Dios','17');
+INSERT INTO departamentos(departamento,codigo) VALUES('Moquegua','18');
+INSERT INTO departamentos(departamento,codigo) VALUES('Pasco','19');
+INSERT INTO departamentos(departamento,codigo) VALUES('Piura','20');
+INSERT INTO departamentos(departamento,codigo) VALUES('Puno','21');
+INSERT INTO departamentos(departamento,codigo) VALUES('San Martin','22');
+INSERT INTO departamentos(departamento,codigo) VALUES('Tacna','23');
+INSERT INTO departamentos(departamento,codigo) VALUES('Tumbes','24');
+INSERT INTO departamentos(departamento,codigo) VALUES('Ucayali','25');
