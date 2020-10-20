@@ -1,5 +1,7 @@
 package com.developer.bryan.ubigeo.api.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -26,6 +28,7 @@ public class Departamento implements Serializable {
     @Column(length = 2)
     private String codigo;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "departamento")
     private List<Provincia> provincias;
 
