@@ -19,14 +19,10 @@ public class Departamento implements Serializable {
     private Integer id;
 
     @Column(length = 13)
-    private String departamento;
+    private String nombre;
 
     @Column(length = 2)
     private String codigo;
-
-    public Departamento() {
-
-    }
 
     public Integer getId() {
         return id;
@@ -36,12 +32,12 @@ public class Departamento implements Serializable {
         this.id = id;
     }
 
-    public String getDepartamento() {
-        return departamento;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setDepartamento(String departamento) {
-        this.departamento = departamento;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getCodigo() {
@@ -56,7 +52,7 @@ public class Departamento implements Serializable {
     public String toString() {
         return "Departamento{" +
                 "id=" + id +
-                ", departamento='" + departamento + '\'' +
+                ", nombre='" + nombre + '\'' +
                 ", codigo='" + codigo + '\'' +
                 '}';
     }
