@@ -3,6 +3,8 @@ package com.developer.bryan.ubigeo.api.entities;
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import java.io.Serializable;
 
@@ -20,6 +22,18 @@ public class Provincia implements Serializable {
 
     @Column(length = 4)
     private String codigo;
+
+    @ManyToOne
+    @JoinColumn(name = "id_departamento", insertable = false, updatable = false)
+    private Departamento departamento;
+
+    public Departamento getDepartamento() {
+        return departamento;
+    }
+
+    public void setDepartamento(Departamento departamento) {
+        this.departamento = departamento;
+    }
 
     public ProvinciasDepartamentoPK getId() {
         return id;
@@ -51,6 +65,7 @@ public class Provincia implements Serializable {
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", codigo='" + codigo + '\'' +
+                ", departamento=" + departamento +
                 '}';
     }
 }
