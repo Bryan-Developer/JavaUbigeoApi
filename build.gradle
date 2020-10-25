@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+    id 'jacoco'
+    id "org.sonarqube" version "3.0"
+    id 'org.springframework.boot' version '2.3.4.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+}
+
+group = 'com.developer.bryan'
+version = '0.0.1'
+sourceCompatibility = '11'
+targetCompatibility = '11'
+
+sonarqube {
+    properties {
+        property "sonar.branch", "development"
+        property "sonar.exclusions", "src/test/**"
+        property "sonar.host.url", "https://sonarcloud.io"
+        property "sonar.login", "f35a027926ebbc3655aead6100a8bde4ef17cc82"
+        property "sonar.organization", "bryan-developer"
+        property "sonar.projectKey", "Bryan-Developer_JavaUbigeoApi"
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    runtimeOnly 'com.h2database:h2'
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
