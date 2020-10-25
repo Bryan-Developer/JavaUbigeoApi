@@ -1,12 +1,16 @@
 package com.developer.bryan.ubigeo.api.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Table(name = "provincias")
@@ -26,6 +30,10 @@ public class Provincia implements Serializable {
     @ManyToOne
     @JoinColumn(name = "id_departamento", insertable = false, updatable = false)
     private Departamento departamento;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "provincia")
+    private List<Distrito> distritos;
 
     public Departamento getDepartamento() {
         return departamento;
